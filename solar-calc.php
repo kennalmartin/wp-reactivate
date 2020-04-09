@@ -1,25 +1,23 @@
 <?php
 /**
- * WP-Reactivate
+ * Solar Calc
  *
  *
- * @package   WP-Reactivate
- * @author    Pangolin
+ * @package   Solar Calc
+ * @author    Kenna Martin
  * @license   GPL-3.0
- * @link      https://gopangolin.com
- * @copyright 2017 Pangolin (Pty) Ltd
+ * @link      https://linkasaur.us
+ * @copyright 2020 Linkasaur.us
  *
  * @wordpress-plugin
- * Plugin Name:       WP-Reactivate
- * Plugin URI:        https://gopangolin.com
- * Description:       React boilerplate for WordPress plugins
- * Version:           1.0.2
- * Author:            pangolin
- * Author URI:        https://gopangolin.com
- * Text Domain:       wp-reactivate
+ * Plugin Name:       Solar Calculator
+ * Plugin URI:        https://linkasaur.us
+ * Description:       Calculator to determine solar needs
+ * Version:           0.0.1
+ * Author:            Kenna Martin
+ * Author URI:        https://linkasaur.us
  * License:           GPL-3.0
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.txt
- * Domain Path:       /languages
  */
 
 
@@ -79,7 +77,7 @@ function init() {
 	$wpr = Plugin::get_instance();
 	$wpr_shortcode = Shortcode::get_instance();
 	$wpr_admin = Admin::get_instance();
-	$wpr_rest = Endpoint\Example::get_instance();
+	$wpr_rest = Endpoint\Admin::get_instance();
 }
 add_action( 'plugins_loaded', 'Pangolin\\WPR\\init' );
 
@@ -100,4 +98,3 @@ add_action( 'widgets_init', 'Pangolin\\WPR\\widget_init' );
  */
 register_activation_hook( __FILE__, array( 'Pangolin\\WPR\\Plugin', 'activate' ) );
 register_deactivation_hook( __FILE__, array( 'Pangolin\\WPR\\Plugin', 'deactivate' ) );
-

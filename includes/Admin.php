@@ -1,14 +1,4 @@
 <?php
-/**
- * WP-Reactivate
- *
- *
- * @package   WP-Reactivate
- * @author    Pangolin
- * @license   GPL-3.0
- * @link      https://gopangolin.com
- * @copyright 2017 Pangolin (Pty) Ltd
- */
 
 namespace Pangolin\WPR;
 
@@ -147,8 +137,8 @@ class Admin {
 		 * Add a settings page for this plugin to the Settings menu.
 		 */
 		$this->plugin_screen_hook_suffix = add_options_page(
-			__( 'WP Reactivate', $this->plugin_slug ),
-			__( 'WP Reactivate', $this->plugin_slug ),
+			__( 'Solar Calculator', $this->plugin_slug ),
+			__( 'Solar Calculator', $this->plugin_slug ),
 			'manage_options',
 			$this->plugin_slug,
 			array( $this, 'display_plugin_admin_page' )

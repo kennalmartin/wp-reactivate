@@ -1,14 +1,4 @@
 <?php
-/**
- * WP-Reactivate
- *
- *
- * @package   WP-Reactivate
- * @author    Pangolin
- * @license   GPL-3.0
- * @link      https://gopangolin.com
- * @copyright 2017 Pangolin (Pty) Ltd
- */
 
 namespace Pangolin\WPR;
 
@@ -17,16 +7,7 @@ namespace Pangolin\WPR;
  */
 class Plugin {
 
-	/**
-	 * The variable name is used as the text domain when internationalizing strings
-	 * of text. Its value should match the Text Domain file header in the main
-	 * plugin file.
-	 *
-	 * @since    1.0.0
-	 *
-	 * @var      string
-	 */
-	protected $plugin_slug = 'wp-reactivate';
+  protected $plugin_slug = 'solar-calc'; 
 
 	/**
 	 * Instance of this class.
@@ -74,7 +55,7 @@ class Plugin {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-		add_option( 'wpr_example_setting' );
+		add_option( 'email' );
 	}
 
 	/**
